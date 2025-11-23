@@ -1,0 +1,26 @@
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+      <form class="row g-2" #f="ngForm" (ngSubmit)="f.form.valid && agregar()">
+        <div class="col-auto">
+        </div>
+        <div class="col-auto">
+          <input type="text" class="form-control border-success" placeholder="Titulo" required 
+            [(ngModel)]="tituloInput" name="tituloInput"/>
+        </div>
+        <div class="col-auto">
+          <input type="text" class="form-control border-success" placeholder="Descripción" required 
+            [(ngModel)]="descripcionInput" name="descripcionInput"/>
+        </div>
+        <div class="col-auto">
+          <input type="text" class="form-control border-success" placeholder="Modulo" required 
+            [(ngModel)]="moduloInput" name="moduloInput"/>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-success">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+

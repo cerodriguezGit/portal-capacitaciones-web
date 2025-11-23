@@ -7,7 +7,6 @@ export interface Curso {
     titulo: string;
     modulo: string;
     descripcion: string;
-    urlImagen: string;
     estado: string;
 }
 @Injectable({
@@ -18,6 +17,10 @@ export class CursosService {
     private apiUrl = "http://localhost:8080/api/v1/cursos";
 
     constructor(private http: HttpClient) { }
+
+    crearCurso(curso: any): Observable<Curso> {
+        return this.http.post<any>(this.apiUrl, curso);
+    }
 
     getCursos() {
         return this.http.get<any[]>(this.apiUrl);
