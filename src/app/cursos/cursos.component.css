@@ -10,13 +10,51 @@
 }
 
 .NO_INICIADO {
-  color: #1663b1;
+  color: #fff;
+  background-color: #1663b1;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .INICIADO {
-  color: #FFC107;
+ color: #fff;
+  background-color: #ff9800;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .COMPLETADO {
-  color: #209724;
+  color: #fff;
+  background-color: #4caf50;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
 }
+
+.chip {
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.insignia {
+  width: 55px;
+  margin-top: 12px;
+}
+

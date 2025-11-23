@@ -4,22 +4,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
 import { Curso, CursosService } from '../cursos/service/cursos.service';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-modulos',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatButtonModule],
+  imports: [CommonModule, MatCardModule, MatButtonModule, MatMenuModule],
   templateUrl: './modulos.html',
   styleUrl: './modulos.css',
 })
 export class Modulos {
-
-  // modulos = [
-  //   { nombre: 'Fullstack', icono: '👨‍💻' },
-  //   { nombre: 'APIs e Integraciones', icono: '🔗' },
-  //   { nombre: 'Cloud', icono: '☁️' },
-  //   { nombre: 'Data Engineer', icono: '📊' }
-  // ];
 
   modulos: any[] = [];
 
@@ -39,4 +33,7 @@ export class Modulos {
     this.router.navigate(['/cursos'], { state: { modulo }});
   }
 
+  crearCurso() {
+  this.router.navigate(['/admin/cursos']);
+}
 }

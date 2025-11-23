@@ -1,3 +1,13 @@
+<div class="d-flex justify-content-end"> 
+    <button [matMenuTriggerFor]="menu" class="btn bg-white text-dark shadow-sm">
+      Administración
+    </button>
+    
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="crearCurso()">Cursos</button>
+    </mat-menu>
+  </div>
+
 <div class="container">
   <h4 class="pb-4">¿Qué deseas aprender hoy?</h4>
   <div class="grid">
