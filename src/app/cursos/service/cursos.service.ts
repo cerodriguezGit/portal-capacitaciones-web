@@ -26,7 +26,7 @@ export class CursosService {
         return this.http.get<any[]>(this.apiUrl);
     }
 
-    actualizarCurso(id: number, curso: Curso): Observable<any> {
+    editarCurso(id: number, curso: any): Observable<any> {
         return this.http.put(`${this.apiUrl}/${id}`, curso);
     }
 
