@@ -1,0 +1,13 @@
+<div class="container">
+  <h4 class="pb-4">¿Qué deseas aprender hoy?</h4>
+  <div class="grid">
+    @for (item of modulos; track $index) {
+    <mat-card class="card">
+      <h2>{{ item }}</h2>
+      <button mat-raised-button color="primary" (click)="verCursos(item)">
+        Ver Cursos
+      </button>
+    </mat-card>
+    }
+  </div>
+</div>

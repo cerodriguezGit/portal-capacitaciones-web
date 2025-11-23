@@ -1,0 +1,22 @@
+.container {
+  padding: 30px;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.NO_INICIADO {
+  color: #1663b1;
+}
+
+.INICIADO {
+  color: #FFC107;
+}
+
+.COMPLETADO {
+  color: #209724;
+}

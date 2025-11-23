@@ -16,14 +16,16 @@ export class LoginService {
   login(userName: string, password: string) {
     return this.http.post<any>(this.urlApi, { userName, password }).pipe(
       tap(res => {
-        localStorage.setItem('token', 'token-simulado');
-        localStorage.setItem('user', res.userName);
+        if (res) {
+          localStorage.setItem('token', 'token-simulado');
+          localStorage.setItem('user', res.userName);
+        }
       }),
       catchError((error) => {
-      const message = error.error?.message || 'Credenciales inválidas';
-      return throwError(() => message);
-    })
-      );
+        const message = error.error?.message || 'Credenciales inválidas';
+        return throwError(() => message);
+      })
+    );
   }
 
   isLoggedIn(): boolean {
