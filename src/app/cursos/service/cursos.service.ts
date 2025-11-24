@@ -14,7 +14,7 @@ export interface Curso {
 })
 export class CursosService {
 
-    private apiUrl = "http://localhost:8080/api/v1/cursos";
+    private apiUrl = "https://portal-capacitaciones-api.onrender.com/api/v1/cursos";
 
     constructor(private http: HttpClient) { }
 
