@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  titulo = 'Portal Capacitaciones GFT Tecnologies';
+  titulo = 'Portal Capacitaciones GFT Technologies';
 }
