@@ -3,7 +3,9 @@
   <ul class="list-group mt-3">
     @for (item of cursoFilter; track item.id) {
     <li class="list-group-item">
-      <img *ngIf="item.estado === 'COMPLETADO'" src="assets/insignias/medalla.png" class="insignia">
+      @if (item.estado === 'COMPLETADO') {
+      <img src="assets/insignias/medalla.png" class="insignia">
+      }
 
       <div class="content">
         <h4>{{ item.titulo }}</h4>
@@ -11,9 +13,9 @@
       </div>
       <button [ngClass]="item.estado" (click)="marcarCurso(item)" [disabled]="item.estado == 'COMPLETADO'">
         {{item.estado.replace('_', ' ')}}
-        <ng-container *ngIf="item.estado === 'COMPLETADO'">
-          ✔
-        </ng-container>
+        @if (item.estado === 'COMPLETADO') {
+        ✔
+        }
       </button>
     </li>
     }

@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-end">
+  <button [matMenuTriggerFor]="menu" class="btn bg-white text-dark shadow-sm">
+    Administración
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="adminPerfil()">Perfil</button>
+    <button mat-menu-item (click)="adminCurso()">Cursos</button>
+  </mat-menu>
+
+  <button class="btn bg-white text-dark shadow-sm mx-3" (click)="cerrarSesion()">
+    Cerrar Sesión
+  </button>
+</div>
+
+<div class="container">
+  <h4 class="pb-4">¿Qué deseas aprender hoy?</h4>
+  <div class="grid">
+    @for (item of modulos; track $index) {
+    <mat-card class="card">
+      <h2>{{ item }}</h2>
+      <button mat-raised-button color="primary" (click)="verCursos(item)">
+        Ver Cursos
+      </button>
+    </mat-card>
+    }
+  </div>
+</div>

@@ -5,19 +5,24 @@ import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
 import { Curso, CursosService } from '../cursos/service/cursos.service';
 import { MatMenuModule } from '@angular/material/menu';
+import { LoginService } from '../login/services/login.service';
 
 @Component({
   selector: 'app-modulos',
   standalone: true,
   imports: [CommonModule, MatCardModule, MatButtonModule, MatMenuModule],
-  templateUrl: './modulos.html',
-  styleUrl: './modulos.css',
+  templateUrl: './modulos.component.html',
+  styleUrl: './modulos.component.css',
 })
-export class Modulos {
+export class ModulosComponent {
 
   modulos: any[] = [];
 
-  constructor(private router: Router, private cursosService: CursosService) {}
+  constructor(
+    private router: Router,
+    private cursosService: CursosService,
+    private loginService: LoginService
+  ) { }
 
   ngOnInit() {
     this.cargarModulos();
@@ -30,10 +35,19 @@ export class Modulos {
   }
 
   verCursos(modulo: any) {
-    this.router.navigate(['/cursos'], { state: { modulo }});
+    this.router.navigate(['/cursos'], { state: { modulo } });
   }
 
-  crearCurso() {
-  this.router.navigate(['/admin/cursos']);
-}
+  adminCurso() {
+    this.router.navigate(['/admin/cursos']);
+  }
+
+  adminPerfil() {
+    this.router.navigate(['/admin/perfil']);
+  }
+
+  cerrarSesion() {
+    this.loginService.logout();
+    this.router.navigate(['/login']);
+  }
 }

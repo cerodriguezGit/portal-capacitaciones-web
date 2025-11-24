@@ -68,5 +68,6 @@ export class FormularioComponent implements OnChanges {
     this.tituloInput = null;
     this.descripcionInput = null;
     this.moduloInput = null;
+    this.cursoEditar = null;
   }
 }
