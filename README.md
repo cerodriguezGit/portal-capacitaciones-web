@@ -1,59 +1,40 @@
-# PortalCapacitacionesWeb
+#Portal de Capacitaciones Interactivo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+Este proyecto contiene el frontend del portal con el login, modulos, cursos (Agregar/editar), perfil con historico e informacion de insignias.
 
-## Development server
+#Tecnologias
 
-To start a local development server, run:
+-Angular CLI 20.3.11
+-Nodejs v24.11.0
+-Bootstrap 20.3.11
+-TypeScript
+-Angular Material
+-Visual Studio Code
 
-```bash
-ng serve
-```
+#Instalación
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. Clonar el repositorio: https://github.com/cerodriguezGit/portal-capacitaciones-web.git
 
-## Code scaffolding
+2. Abrir visual studio code.
+3. Abrir el proyecto desde la ruta donde se ubico -> file -> openFolder -> carpeta proyecto.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+4. Abrir terminal desde visual studio code -> terminal -> new terminal
+5. Instalar dependencias con el comando: npm install
+6. Ejecutar el proyecto con el comando: ng serve -o
+7. Se abrirá en el navegador la pagina web del portal  de capacitaciones interactivo, si no se abre automaticamente escribir en el navegador la ruta: http://localhost:4200/
 
-```bash
-ng generate component component-name
-```
+#Funcionalidades
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+-Login: Permite acceder al portal con un usuario determinado.
 
-```bash
-ng generate --help
-```
+-Modulos y cursos: Listado de modulos y cursos
+FullStack
+APIs e Integraciones
+Cloud
+Data Engineer
 
-## Building
+-Marcar Estado de Cursos: Cada curso tiene unos estados de progreso.
 
-To build the project run:
+-Perfil del Usuario: Contiene datos basicos del usuario, insignias obtenidas e historico de cursos.
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
