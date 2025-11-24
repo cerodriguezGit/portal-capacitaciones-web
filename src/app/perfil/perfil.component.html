@@ -44,8 +44,8 @@
                     <td>{{ curso.modulo }}</td>
                     <td>
                         <span class="badge" [ngClass]="{
-                'bg-secondary': curso.estado === 'por iniciar',
-                'bg-primary': curso.estado === 'INICIADO',
+                'bg-secondary': curso.estado === 'PENDIENTE',
+                'bg-primary': curso.estado === 'EN_PROGRESO',
                 'bg-success': curso.estado === 'COMPLETADO'
               }">
                             {{ curso.estado }}

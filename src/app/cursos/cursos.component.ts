@@ -36,8 +36,8 @@ export class CursosComponent implements OnInit {
     if (curso.estado === 'COMPLETADO') return;
 
     let nuevoEstado =
-      curso.estado === 'NO_INICIADO'
-        ? 'INICIADO'
+      curso.estado === 'PENDIENTE'
+        ? 'EN_PROGRESO'
         : 'COMPLETADO';
 
     this.cursosService.actualizarEstado(curso.id, nuevoEstado)

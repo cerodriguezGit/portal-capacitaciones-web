@@ -9,7 +9,7 @@
   border: 1px solid #ddd;
 }
 
-.NO_INICIADO {
+.PENDIENTE {
   color: #fff;
   background-color: #1663b1;
   padding: 6px 14px;
@@ -20,7 +20,7 @@
   margin-top: 10px;
 }
 
-.INICIADO {
+.EN_PROGRESO {
  color: #fff;
   background-color: #ff9800;
   padding: 6px 14px;

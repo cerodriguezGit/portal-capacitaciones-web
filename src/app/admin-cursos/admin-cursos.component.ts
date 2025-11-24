@@ -19,6 +19,10 @@ export class AdminCursosComponent {
   constructor(private cursosService: CursosService) { }
 
   ngOnInit(): void {
+    this.cargarCursos();
+  }
+
+  cargarCursos() {
     this.cursosService.getCursos().subscribe((cursos) => {
       this.cursos = cursos;
     });

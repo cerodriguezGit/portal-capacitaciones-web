@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Curso, CursosService } from '../cursos/service/cursos.service';
 import { MatIcon } from "@angular/material/icon";
@@ -17,9 +17,10 @@ export class FormularioComponent implements OnChanges {
   tituloInput: string | null = null;
   descripcionInput: string | null = null;
   moduloInput: string | null = null;
-  estadoInput: string = "NO_INICIADO"
+  estadoInput: string = "PENDIENTE";
 
   @Input() cursoEditar: Curso | null = null;
+  @Output() cursoGuardado = new EventEmitter<void>();
 
   constructor(private cursosService: CursosService) { }
 
@@ -50,6 +51,7 @@ export class FormularioComponent implements OnChanges {
       this.cursosService.editarCurso(this.cursoEditar.id, curso)
         .subscribe(() => {
           alert('Curso actualizado con éxito');
+          this.cursoGuardado.emit();
           this.limpiarFormulario();
         });
       return;
@@ -59,6 +61,7 @@ export class FormularioComponent implements OnChanges {
     this.cursosService.crearCurso(curso)
       .subscribe(() => {
         alert('Curso creado con éxito');
+        this.cursoGuardado.emit();
         this.limpiarFormulario();
       });
   }

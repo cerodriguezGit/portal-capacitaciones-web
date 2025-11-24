@@ -27,7 +27,7 @@ export class PerfilComponent {
     this.cursosService.getCursos().subscribe((cursos) => {
       this.cursos = cursos;
       this.insignias = this.cursos.filter(c => c.estado === 'COMPLETADO');
-      this.historico = cursos.filter((c: Curso) => c.estado !== 'NO_INICIADO');
+      this.historico = cursos.filter((c: Curso) => c.estado !== 'PENDIENTE');
     });
   }
 
