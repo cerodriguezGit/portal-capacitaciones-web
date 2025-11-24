@@ -1,0 +1,60 @@
+.container {
+  padding: 30px;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.PENDIENTE {
+  color: #fff;
+  background-color: #1663b1;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.EN_PROGRESO {
+ color: #fff;
+  background-color: #ff9800;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.COMPLETADO {
+  color: #fff;
+  background-color: #4caf50;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.chip {
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.insignia {
+  width: 55px;
+  margin-top: 12px;
+}
+

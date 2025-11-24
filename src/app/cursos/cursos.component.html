@@ -1,0 +1,23 @@
+<div class="container">
+  <h4 class="pb-4">Cursos del módulo: {{ modulo }}</h4>
+  <ul class="list-group mt-3">
+    @for (item of cursoFilter; track item.id) {
+    <li class="list-group-item">
+      @if (item.estado === 'COMPLETADO') {
+      <img src="assets/insignias/medalla.png" class="insignia">
+      }
+
+      <div class="content">
+        <h4>{{ item.titulo }}</h4>
+        <p>{{ item.descripcion }}</p>
+      </div>
+      <button [ngClass]="item.estado" (click)="marcarCurso(item)" [disabled]="item.estado == 'COMPLETADO'">
+        {{item.estado.replace('_', ' ')}}
+        @if (item.estado === 'COMPLETADO') {
+        ✔
+        }
+      </button>
+    </li>
+    }
+  </ul>
+</div>

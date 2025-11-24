@@ -1,0 +1,59 @@
+<div class="container mt-4">
+
+    <div class="card shadow-sm p-4 mb-4">
+        <h3>Perfil del Usuario</h3>
+        <p><strong>Nombre:</strong> {{ usuario.nombre }}</p>
+        <p><strong>Correo:</strong> {{ usuario.correo }}</p>
+    </div>
+
+    <div class="card shadow-sm p-4 mb-4">
+        <h4>Insignias Obtenidas</h4>
+
+        @if (insignias.length === 0) {
+        <p>No tienes insignias todavía. ¡Completa cursos para obtenerlas!</p>
+        }
+
+        @if (insignias.length > 0) {
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            @for (curso of insignias; track curso.id) {
+            <div class="badge-card">
+                <img src="assets/insignias/medalla.png" alt="insignia" width="60">
+                <p class="mt-2"><strong>{{ curso.titulo }}</strong></p>
+            </div>
+            }
+        </div>
+        }
+    </div>
+
+
+    <div class="card shadow-sm p-4 mb-4">
+        <h4> Historial de Cursos</h4>
+
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Curso</th>
+                    <th>Módulo</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (curso of historico; track curso.id) {
+                <tr>
+                    <td>{{ curso.titulo }}</td>
+                    <td>{{ curso.modulo }}</td>
+                    <td>
+                        <span class="badge" [ngClass]="{
+                'bg-secondary': curso.estado === 'PENDIENTE',
+                'bg-primary': curso.estado === 'EN_PROGRESO',
+                'bg-success': curso.estado === 'COMPLETADO'
+              }">
+                            {{ curso.estado }}
+                        </span>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container d-flex justify-content-center align-items-center my-5">
+    <div class="card p-4 shadow-sm" style="width: 25rem;">
+        <h3 class="text-center mb-4">Iniciar Sesión</h3>
+        <form #f="ngForm" (ngSubmit)="f.form.valid && login(f)">
+            <!-- Campo de Usuario -->
+            <div class="mb-3">
+                <input type="usuario" class="form-control" id="usuario" name="usuario" placeholder="Usuario" ngModel
+                    required>
+            </div>
+            <!-- Campo de Contraseña -->
+            <div class="mb-3">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" ngModel
+                    required>
+            </div>
+            <!-- Botón de Login -->
+            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+        </form>
+    </div>
+</div>
