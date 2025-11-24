@@ -9,7 +9,7 @@ import { catchError, tap } from 'rxjs/operators';
 })
 export class LoginService {
 
-  private urlApi = "http://localhost:8080/api/v1/auth/login";
+  private urlApi = "https://portal-capacitaciones-api.onrender.com/api/v1/auth/login";
 
   constructor(private http: HttpClient) { }
 
